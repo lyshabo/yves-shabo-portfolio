@@ -28,6 +28,9 @@
       letter-spacing: 0;
     }
     a { color: inherit; }
+    a:focus-visible, .button:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+    .skip-link { position: absolute; left: 12px; top: -48px; z-index: 10; padding: 10px 14px; background: var(--ink); color: var(--white); text-decoration: none; border-radius: 4px; }
+    .skip-link:focus { top: 12px; }
     .wrap { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
     header {
       min-height: 88vh;
@@ -144,6 +147,7 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <nav>
     <div class="wrap nav-inner">
       <div class="name">Yves Shabo Nkulu-Ily</div>
@@ -175,7 +179,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section id="innovation">
       <div class="wrap section-head">
         <h2>The invention</h2>
@@ -185,6 +189,19 @@
           <div class="pill-row">
             <span class="pill">Augmented reality</span><span class="pill">WebXR</span><span class="pill">Medical education</span><span class="pill">Orthopedic training</span><span class="pill">Haptics</span><span class="pill">Simulation</span><span class="pill">Distance education</span>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contribution">
+      <div class="wrap section-head">
+        <h2>What I contribute</h2>
+        <div class="section-copy">
+          <p>I translate emerging XR/AI capabilities into defensible learning experiences for medical and higher education.</p>
+          <div class="pill-row">
+            <span class="pill">Learning-design translation</span><span class="pill">Medical simulation</span><span class="pill">Feedback design</span><span class="pill">Technology-transfer communication</span>
+          </div>
+          <p><strong>Open to:</strong> research collaboration, educational-technology development, and medical-education innovation projects.</p>
         </div>
       </div>
     </section>
