@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Innovation and research portfolio for Yves Shabo Nkulu-Ily, focused on XR, AI, haptics, and medical education.">
+  <title>Yves Shabo Nkulu-Ily | Innovation & XR/AI Research</title>
+  <style>
+    :root {
+      --ink: #1c211e;
+      --muted: #59635e;
+      --forest: #245546;
+      --teal: #2d7d78;
+      --gold: #b78a38;
+      --paper: #f7f5ef;
+      --white: #ffffff;
+      --line: #d7dbd7;
+      --soft: #e7efec;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.5;
+      letter-spacing: 0;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+    header {
+      min-height: 88vh;
+      display: grid;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+      background: var(--white);
+    }
+    nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid rgba(28, 33, 30, .1);
+      background: rgba(255,255,255,.96);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .name { font-size: 15px; font-weight: 750; }
+    .nav-links { display: flex; gap: 18px; font-size: 13px; }
+    .nav-links a { text-decoration: none; color: var(--muted); }
+    .hero {
+      padding: 116px 0 56px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(320px, .72fr);
+      gap: 70px;
+      align-items: center;
+    }
+    .eyebrow {
+      color: var(--teal);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    h1 {
+      margin: 0;
+      max-width: 820px;
+      font-family: Georgia, serif;
+      font-size: clamp(42px, 5.2vw, 72px);
+      font-weight: 500;
+      line-height: 1.04;
+    }
+    .lead { max-width: 760px; margin: 26px 0 0; font-size: 20px; color: var(--muted); }
+    .status {
+      margin-top: 28px;
+      padding: 18px 0 18px 20px;
+      border-left: 4px solid var(--gold);
+      max-width: 720px;
+      font-size: 15px;
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border: 1px solid var(--ink);
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      background: var(--ink);
+      color: var(--white);
+    }
+    .button.secondary { color: var(--ink); background: transparent; }
+    .evidence {
+      position: relative;
+      padding: 20px 20px 14px;
+      background: #d9dcda;
+      border-radius: 6px;
+    }
+    .evidence img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: top; border: 1px solid #b9bfbb; background: white; }
+    .evidence figcaption { margin-top: 11px; font-size: 12px; color: #49524d; }
+    main section { padding: 72px 0; border-bottom: 1px solid var(--line); }
+    .section-head { display: grid; grid-template-columns: 250px 1fr; gap: 36px; align-items: start; }
+    h2 { margin: 0; font-family: Georgia, serif; font-size: 31px; font-weight: 500; }
+    .section-copy { max-width: 820px; font-size: 17px; color: var(--muted); }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+    .pill { padding: 7px 10px; border: 1px solid #b8c5bf; border-radius: 999px; background: var(--white); font-size: 12px; font-weight: 700; color: var(--forest); }
+    .research-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; margin-top: 34px; background: var(--line); border: 1px solid var(--line); }
+    .research-item { min-height: 240px; padding: 28px; background: var(--white); }
+    .research-item .year { color: var(--gold); font-size: 13px; font-weight: 800; }
+    .research-item h3 { margin: 12px 0 10px; font-family: Georgia, serif; font-size: 22px; font-weight: 500; line-height: 1.25; }
+    .research-item p { color: var(--muted); font-size: 14px; }
+    .research-item a { display: inline-block; margin-top: 10px; color: var(--teal); font-size: 13px; font-weight: 800; text-decoration: none; }
+    .timeline { margin-top: 34px; display: grid; grid-template-columns: 140px 1fr; gap: 0 28px; }
+    .time { padding: 20px 0; color: var(--gold); font-size: 13px; font-weight: 800; border-top: 1px solid var(--line); }
+    .event { padding: 20px 0; border-top: 1px solid var(--line); }
+    .event strong { display: block; margin-bottom: 6px; }
+    .event span { color: var(--muted); }
+    .disclaimer { background: var(--soft); }
+    .disclaimer .section-copy { color: #33413b; }
+    footer { padding: 34px 0 46px; background: var(--ink); color: white; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 30px; align-items: flex-start; }
+    .footer-title { font-family: Georgia, serif; font-size: 24px; }
+    .profile-links { display: flex; flex-wrap: wrap; gap: 14px; }
+    .profile-links a { color: white; font-size: 13px; }
+    @media (max-width: 820px) {
+      .wrap { width: min(100% - 28px, 700px); }
+      header { min-height: auto; }
+      .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; gap: 36px; padding-top: 105px; }
+      h1 { font-size: 42px; }
+      .lead { font-size: 18px; }
+      .evidence { max-width: 460px; }
+      .section-head { grid-template-columns: 1fr; gap: 16px; }
+      .research-grid { grid-template-columns: 1fr; }
+      .timeline { grid-template-columns: 90px 1fr; gap: 0 18px; }
+      .footer-inner { display: grid; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap nav-inner">
+      <div class="name">Yves Shabo Nkulu-Ily</div>
+      <div class="nav-links">
+        <a href="#innovation">Innovation</a>
+        <a href="#research">Research</a>
+        <a href="#status">Status</a>
+        <a href="#profiles">Profiles</a>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div class="wrap hero">
+      <div>
+        <div class="eyebrow">Learning Design · XR/AI · Haptics · Medical Education</div>
+        <h1>Immersive orthopedic learning, designed from pedagogy outward.</h1>
+        <p class="lead">Yves Shabo Nkulu-Ily is a Ph.D. Candidate in Education and the disclosed originator of University of Kentucky Invention Report 2541, an internet-based immersive 3-D orthopedic learning environment using augmented reality.</p>
+        <div class="status"><strong>Verified institutional record:</strong> On December 15, 2020, the University of Kentucky Intellectual Property Committee identified Yves NKULU-ILY Shabo as the disclosed originator and recommended investigation of appropriate protection and a commercial pathway.</div>
+        <div class="actions">
+          <a class="button" href="portfolio_assets/IPC_Decision_2541.pdf">Read IPC decision</a>
+          <a class="button secondary" href="#research">View related research</a>
+        </div>
+      </div>
+      <figure class="evidence">
+        <img src="portfolio_assets/IPC_Decision_2541.png" alt="Condensed visual facsimile of the December 15, 2020 Intellectual Property Committee decision letter">
+        <figcaption>Condensed facsimile for presentation. The linked PDF is the controlling source document.</figcaption>
+      </figure>
+    </div>
+  </header>
+
+  <main>
+    <section id="innovation">
+      <div class="wrap section-head">
+        <h2>The invention</h2>
+        <div class="section-copy">
+          <p><strong>Invention Report 2541:</strong> “The Design of an Internet-Based Immersive 3-D Digital Orthopedics Learning Environment Using Augmented Reality.”</p>
+          <p>The concept connects immersive technology with instructional design for distributed orthopedic education. Its research context includes realistic decision-making, feedback, cognitive fit, haptics, simulation-based learning, and access in resource-constrained settings.</p>
+          <div class="pill-row">
+            <span class="pill">Augmented reality</span><span class="pill">WebXR</span><span class="pill">Medical education</span><span class="pill">Orthopedic training</span><span class="pill">Haptics</span><span class="pill">Simulation</span><span class="pill">Distance education</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Related research</h2>
+          <p class="section-copy">A publication program examining how XR, AI, feedback, and haptic cues can support authentic learning and decision-making in medical distance education.</p>
+        </div>
+        <div class="research-grid">
+          <article class="research-item">
+            <div class="year">2026 · JOURNAL ARTICLE</div>
+            <h3>Simulating realistic surgeon decisions and actions in immersive medical distance education with XR and AI</h3>
+            <p>Interactive Learning Environments, 34(4), 2223–2268.</p>
+            <a href="https://doi.org/10.1080/10494820.2025.2542893">Open DOI</a>
+          </article>
+          <article class="research-item">
+            <div class="year">2026 · PREPRINT</div>
+            <h3>Bridging Distance with Sensation</h3>
+            <p>Immersive haptic feedback for enhanced orthopedic education in XR/AI.</p>
+            <a href="https://doi.org/10.2139/ssrn.6568980">Open DOI</a>
+          </article>
+          <article class="research-item">
+            <div class="year">2023 · SPRINGER</div>
+            <h3>Combining XR and AI for feedback in surgical medical distance education</h3>
+            <p>International Conference on Intelligent Tutoring Systems, pp. 452–466.</p>
+            <a href="https://doi.org/10.1007/978-3-031-32883-1_41">Open DOI</a>
+            <a href="portfolio_assets/XR_AI_Springer_2023.pdf">Open source PDF</a>
+          </article>
+          <article class="research-item">
+            <div class="year">2023 · JOURNAL ARTICLE</div>
+            <h3>Implementation of e-learning curriculum in higher education</h3>
+            <p>European Journal of Open, Distance and E-Learning, 25(1), 62–73.</p>
+            <a href="https://doi.org/10.2478/eurodl-2023-0005">Open DOI</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap section-head">
+        <h2>Research-to-innovation path</h2>
+        <div>
+          <div class="timeline">
+            <div class="time">DEC 2020</div><div class="event"><strong>Institutional invention review</strong><span>IPC identifies the disclosed originator and recommends protection and commercialization assessment.</span></div>
+            <div class="time">2023</div><div class="event"><strong>XR/AI and e-learning publications</strong><span>Peer-reviewed work connects pedagogy, feedback, immersive systems, and distance education.</span></div>
+            <div class="time">2026</div><div class="event"><strong>Realistic decisions and haptic feedback</strong><span>Journal and preprint outputs extend the research toward authentic surgical action and embodied feedback.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="status" class="disclaimer">
+      <div class="wrap section-head">
+        <h2>Status boundary</h2>
+        <div class="section-copy">
+          <p>The available IPC letter documents an invention disclosure, originator identification, University ownership interest, and a recommendation to investigate protection. It does not establish an issued patent, published patent application, current patent-pending status, license, or personal ownership.</p>
+          <p>As of September 5, 2026, no matching public patent or technology-transfer identifier had been located in the sources searched. Updated public wording should follow any later confirmation from the University of Kentucky Office of Technology Commercialization.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="profiles">
+    <div class="wrap footer-inner">
+      <div>
+        <div class="footer-title">Yves Shabo Nkulu-Ily</div>
+        <div>Learning design · educational technology · XR/AI · haptics · medical education</div>
+      </div>
+      <div class="profile-links">
+        <a href="https://orcid.org/0000-0003-4401-3965">ORCID</a>
+        <a href="https://scholar.google.com/citations?hl=en&amp;user=9ePOtKEAAAAJ">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/yvesshabo">LinkedIn</a>
+        <a href="mailto:lyshabo@hotmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
