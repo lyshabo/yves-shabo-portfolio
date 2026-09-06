@@ -17,7 +17,7 @@ Static portfolio for GitHub Pages or any standard web host.
 - `portfolio_assets/IPC_Decision_2541.pdf` — controlling IPC decision letter
 - `portfolio_assets/IPC_Decision_2541.png` — visual facsimile used in the page
 - `portfolio_assets/ipc_letter_facsimile.html` — standalone facsimile view
-- `portfolio_assets/XR_AI_Springer_2023.pdf` — related XR/AI publication source PDF
+- `portfolio_assets/Yves_S_Nkulu-Ily_Certificate_of_Participation.pdf` — participation evidence related to the XR/AI research
 
 ## Status Language
 
